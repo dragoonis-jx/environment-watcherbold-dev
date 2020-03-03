@@ -5,3 +5,9 @@ dependencies:
   url: https://github.com/dragoonis/phpnw-test-php.git
   version: ""
   versionURL: ""
+- host: github.com
+  owner: dragoonis-jx
+  repo: wip_tst_test_test
+  url: https://github.com/dragoonis-jx/wip_tst_test_test.git
+  version: ""
+  versionURL: ""
