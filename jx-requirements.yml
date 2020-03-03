@@ -1,38 +1,82 @@
 autoUpdate:
   enabled: false
   schedule: ""
+bootConfigURL: https://github.com/cloudbees/cloudbees-jenkins-x-boot-config.git
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  environmentGitPublic: true
-  project: ""
   azure: {}
+  clusterName: watcherbold
+  devEnvApprovers:
+  - dragoonis
+  environmentGitOwner: dragoonis-jx
+  environmentGitPublic: true
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: neev-workshop
   provider: gke
-  zone: ""
-gitops: true
+  registry: gcr.io
+  zone: europe-west2-a
 environments:
-  - key: dev
-  - key: staging
-  - key: production
+- ingress:
+    domain: 35.246.61.41.nip.io
+    externalDNS: false
+    namespaceSubDomain: -jx.
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: dev
+  repository: environment-watcherbold-dev
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: staging
+  repository: environment-watcherbold-staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: production
+  repository: environment-watcherbold-production
+gitops: true
 ingress:
-  domain: ""
+  domain: 35.246.61.41.nip.io
   externalDNS: false
+  namespaceSubDomain: -jx.
   tls:
     email: ""
     enabled: false
     production: false
 kaniko: true
+repository: nexus
 secretStorage: vault
 storage:
+  backup:
+    enabled: false
+    url: ""
   logs:
     enabled: true
-    url: ""
+    url: gs://watcherbold-logs-3d95c3fe-5761-4643-8fd9-9788b874aca9
   reports:
     enabled: true
-    url: ""
+    url: gs://watcherbold-reports-ae55d445-adb6-41cd-a478-4b1a52062b4
   repository:
     enabled: true
-    url: ""
+    url: gs://watcherbold-repository-2cfb9dfa-4c8d-400d-84be-16ebc93f
+vault: {}
+velero:
+  schedule: ""
+  ttl: ""
 versionStream:
   ref: 2.0.1192+cjxd.7
   url: https://github.com/cloudbees/cloudbees-jenkins-x-versions.git

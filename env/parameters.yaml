@@ -1,0 +1,10 @@
+adminUser:
+  password: vault:watcherbold/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: github_bot@dragoonis.com
+  token: vault:watcherbold/pipelineUser:token
+  username: dragoonis-bot
+prow:
+  hmacToken: vault:watcherbold/prow:hmacToken
