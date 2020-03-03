@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: dragoonis
+  repo: phpnw-test-php
+  url: https://github.com/dragoonis/phpnw-test-php.git
+  version: ""
+  versionURL: ""
