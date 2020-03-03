@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: dragoonis-jx
+    provider: github
+    repository: wip_tst_test_test
+  name: dragoonis-jx-wip-tst-test-test
+spec:
+  description: Imported application for dragoonis-jx/wip_tst_test_test
+  httpCloneURL: https://github.com/dragoonis-jx/wip_tst_test_test.git
+  org: dragoonis-jx
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: wip_tst_test_test
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/dragoonis-jx/wip_tst_test_test.git
