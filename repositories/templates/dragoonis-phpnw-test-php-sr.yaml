@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: dragoonis
+    provider: github
+    repository: phpnw-test-php
+  name: dragoonis-phpnw-test-php
+spec:
+  description: Imported application for dragoonis/phpnw-test-php
+  httpCloneURL: https://github.com/dragoonis/phpnw-test-php.git
+  org: dragoonis
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: phpnw-test-php
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/dragoonis/phpnw-test-php.git
